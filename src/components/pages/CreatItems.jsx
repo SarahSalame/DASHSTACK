@@ -59,9 +59,9 @@ const CreatItems = () => {
         <div className="file">
               <div className="image-upload-box" onClick={() => document.getElementById("image").click()}>
                 {image ? (
-                  <img src={image ? URL.createObjectURL(image) : `${process.env.BASE_URL}assets/images/Upload-icon.png`} 
-                  alt="image Preview" 
-                  className="preview-image" />
+                  <img src="https://sarahsalame.github.io/DASHSTACK/assets/images/Upload-icon.png" 
+                  alt="Upload Icon" 
+                  className="upload-image" />
                 ) : (
                   <img src="/assets/images/Upload-icon.png" alt="Upload Icon" className="upload-image" />
                 )}
