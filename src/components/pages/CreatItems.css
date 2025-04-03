@@ -1,0 +1,50 @@
+#creatItems{
+    padding: 36px 32px;
+}
+#creatItems .container{
+    display: flex;
+    justify-content: space-between;
+    gap:93px;
+    width: 100%;
+}
+#creatItems .add-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding-top: 41px;
+}
+#creatItems .add-inputs .input-container{
+    width: 100%;
+    input {
+      width: 100%;
+      height: 45px;
+      background-color: #D8D8D8; 
+      padding-inline: 16px;
+      border: 1px solid #D8D8D8;
+    }
+}
+#creatItems .file{
+    width: 100%;
+}
+#creatItems .image-upload-box{
+    max-width: 475px;
+    height: 218px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+   
+    background-color:#fff;
+    border: 1px dashed #4880FF4D;
+}
+
+#creatItems .preview-image {
+    object-fit: cover; 
+}
+
+#creatItems .file .upload-image {
+    width: 123px;
+    height: 112px;
+    object-fit: contain;
+}

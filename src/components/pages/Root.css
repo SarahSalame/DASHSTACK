@@ -1,0 +1,279 @@
+
+.root {
+  display: flex;
+  height: 100vh;
+}
+
+
+.sideBar {
+  width: 230px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.part1 {
+  color: #4880FF;
+}
+
+.part2 {
+  color: #000;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin: 15px 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.links a:hover {
+  background: #f0f0f0;
+}
+
+.ManageProduct{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ManageProductBtn{
+  width:124px ;
+  height:34px;
+  border-radius:4px;
+  background-color: #4880FF;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.logout-btn button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: #202224;
+  width: 100%;
+  gap: 15px;
+}
+
+.powerIcon{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.links .active a {
+  background: #4880FF;
+  color: white;
+}
+
+.links a:active {
+  background: #4880FF;
+  color: white;
+}
+
+.logout-btn button:hover {
+  background:  #f0f0f0;
+}
+
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #F5F6FA;
+}
+
+
+.navbar {
+  height: 46px;
+  background: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px; 
+}
+.navbar h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #000000; 
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  p{
+    font-size: 12px;
+  }
+}
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-details {
+  margin-left: 10px;
+  text-align: right;
+}
+
+
+/* table */
+.items-container {
+  width: 100%;
+  padding: 36px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  border-radius: 8px;
+}
+
+th, td {
+  border-bottom: 1px solid #D5D5D5;
+  padding: 10px;
+  text-align: left;
+  background-color: #fff;
+}
+
+thead tr{
+  height: 48px;
+}
+tbody tr{
+  height: 77px;
+}
+
+td img {
+  display: block;
+  min-width: 56px;
+  min-height: 50px;
+  object-fit: cover;
+}
+.action{
+  width: 90px;
+  height: 32px;
+  border: 0.6px solid #D5D5D5;
+  border-radius: 8px;
+  background-color: #FAFBFD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action button + button {
+  border-left: 1px solid #D5D5D5; 
+  padding-left: 10px; 
+  margin-left: 10px; 
+}
+button.Edit,
+button.Delet {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px;
+  transition: 0.3s;
+}
+
+
+button.Edit:hover,
+button.Delet:hover {
+  transform: scale(1.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  p{
+    font-size:24px ;
+    font-weight: 600;
+    color: #000;
+  }
+  background: white;
+  padding: 93px 147px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons {
+  margin-top: 53px;
+}
+
+.modal-buttons button {
+  margin: 0 26px;
+  width: 140px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.yes-btn {
+  background: red;
+  color: white;
+}
+
+.no-btn {
+  background: blue;
+  color: white;
+}
