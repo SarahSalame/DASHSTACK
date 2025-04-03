@@ -17,23 +17,21 @@ const SignUp = () => {
           setProfileImage(file); 
       }
   }
-  const [errors, setErrors] = useState({}); // تأكد من تعريف errors هنا
+  const [errors, setErrors] = useState({});
     const sendData=(event)=>{
         event.preventDefault();
         const newErrors = {};
 
-        // التحقق من طول كلمة السر
         if (password.length < 8) {
           newErrors.password = "The password field must be at least 8 characters.";
         }
       
-        // التحقق من تطابق كلمة السر مع التأكيد
         if (password !== password_confirmation) {
           newErrors.password_confirmation = "Passwords do not match.";
         }
       
         if (Object.keys(newErrors).length > 0) {
-          setErrors(newErrors); // إذا كانت هناك أخطاء، يتم تحديث الحالة
+          setErrors(newErrors); 
           return;
         }
 
@@ -132,17 +130,16 @@ const SignUp = () => {
                   placeholder="********"
                   onChange={event =>setPasswordConfirmation(event.target.value)}
                 />
-                 {errors.password_confirmation && <p className="error-text">{errors.password_confirmation}</p>}
+                {errors.password_confirmation && <p className="error-text">{errors.password_confirmation}</p>}
               </div>
-             
             </div>
             <div className="input-container">
               <label htmlFor="profile_image">Profile Image</label>
               <div className="image-upload-box" onClick={() => document.getElementById("profile_image").click()}>
                 {profile_image ? (
-                 <img src={profile_image ? URL.createObjectURL(profile_image) : "assets/images/Upload-icon.png"} 
-                 alt="Profile Preview" 
-                 className="preview-image" />
+                <img src={profile_image ? URL.createObjectURL(profile_image) : "assets/images/Upload-icon.png"} 
+                alt="Profile Preview" 
+                className="preview-image" />
                 ) : (
                   <img src="assets/images/Upload-icon.png" alt="Upload Icon" className="upload-image" />
                 )}
