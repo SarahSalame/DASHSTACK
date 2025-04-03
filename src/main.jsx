@@ -46,10 +46,8 @@ const routes=createBrowserRouter(
         },
       ]
     },
-  ]
+  ],{basename:"/DASHSTACK/"}
 )
-
-
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
